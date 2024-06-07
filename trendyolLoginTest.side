@@ -1,0 +1,117 @@
+{
+  "id": "0acce063-6a33-4d12-b213-1dc8f1eb27f2",
+  "version": "2.0",
+  "name": "Test",
+  "url": "https://www.trendyol.com/giris?cb=/Hesabim",
+  "tests": [{
+    "id": "621c5624-9da1-4525-987c-116f6070428a",
+    "name": "Untitled",
+    "commands": [{
+      "id": "cd52782e-08a4-4373-b7e0-ac79a3e01fc1",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.trendyol.com/giris?cb=/Hesabim",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1b7265fe-1aca-4a03-8801-fba2a8714b63",
+      "comment": "",
+      "command": "storeTitle",
+      "target": "",
+      "targets": [],
+      "value": "title1"
+    }, {
+      "id": "362543d6-3c3e-461f-b4aa-d128ffad5642",
+      "comment": "",
+      "command": "type",
+      "target": "id=login-email",
+      "targets": [
+        ["id=login-email", "id"],
+        ["name=login email", "name"],
+        ["css=#login-email", "css:finder"],
+        ["xpath=//input[@id='login-email']", "xpath:attributes"],
+        ["xpath=//div[@id='login-register']/div[3]/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": "testmail@testmail.com"
+    }, {
+      "id": "85eeb883-dcee-4ae5-b5b9-9cea1bf4ccf4",
+      "comment": "",
+      "command": "type",
+      "target": "id=login-password-input",
+      "targets": [
+        ["id=login-password-input", "id"],
+        ["name=login-password", "name"],
+        ["css=#login-password-input", "css:finder"],
+        ["xpath=//input[@id='login-password-input']", "xpath:attributes"],
+        ["xpath=//div[@id='login-register']/div[3]/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "testpasswordtestpassword123"
+    }, {
+      "id": "00b19194-225a-4282-aa5d-ada9c6eff837",
+      "comment": "",
+      "command": "click",
+      "target": "css=.q-primary",
+      "targets": [
+        ["css=.q-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='login-register']/div[3]/div/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "78014964-cb3e-4ed6-ae8b-a587400dbe50",
+      "comment": "",
+      "command": "storeTitle",
+      "target": "",
+      "targets": [],
+      "value": "title2"
+    }, {
+      "id": "965b60c9-68c4-461d-a51c-4d1fba83c5db",
+      "comment": "",
+      "command": "if",
+      "target": "${title1} != ${title2}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "129b6591-2929-4047-8d79-03c54ce535b7",
+      "comment": "",
+      "command": "echo",
+      "target": "Test is succesful",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3ac93272-ebb6-49bc-a747-837992015a7e",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9140e261-b63d-448f-9f26-f8bb3749e83e",
+      "comment": "",
+      "command": "echo",
+      "target": "test is not succesful",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cd51ed53-3784-4a9b-a170-34e84bacf634",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "2dd6de20-e601-4639-add4-8a44f617418f",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["621c5624-9da1-4525-987c-116f6070428a"]
+  }],
+  "urls": ["https://www.trendyol.com/giris?cb=/Hesabim"],
+  "plugins": []
+}
